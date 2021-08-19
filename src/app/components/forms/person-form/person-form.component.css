@@ -1,0 +1,49 @@
+.example-form{
+    display: inline-flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.active{
+    display: flex;
+    justify-content: center;
+}
+
+.fields{
+    min-width: 40%;
+    margin: 0.5rem;
+}
+
+.submit_form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3rem;
+/*  al poner con navbar, cambiarle
+    position: relative;
+    left: 30%;
+     */
+}
+
+.button-send_style{
+    color: whitesmoke;
+    font-weight: bolder;
+    background-color: #50c878;
+    border-radius: 0.5rem;
+}
+
+input{
+    padding: 0.5rem;
+    max-width: 70%;
+    box-sizing: border-box;
+    background: none;
+    border: 0;
+    border-bottom: 0.125rem solid black;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+  

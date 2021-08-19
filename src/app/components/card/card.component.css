@@ -1,0 +1,19 @@
+.card{
+    background-color: red;
+    max-width: 12rem;
+    height: 17.5rem;
+    min-height: 15rem;
+    display: flex;
+    flex-direction: column ;
+    border-radius: 0.5rem;
+}
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: blue;
+    padding: 0.5rem;
+}
+
+p{
+    margin: 0.5em;
+}

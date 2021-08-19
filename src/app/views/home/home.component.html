@@ -1,0 +1,10 @@
+
+<div class="home">
+    <app-person-form></app-person-form>
+    <hr>
+    <div class="card-home" *ngFor="let profile of homeProfiles">
+        <app-card [person]="homeProfiles"></app-card>
+    </div>
+
+</div>
+

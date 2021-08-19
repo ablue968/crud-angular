@@ -1,0 +1,35 @@
+<div>
+    <form class="submit_form" [formGroup]="personForm" (ngSubmit)="onSubmit()">
+        <div class="example-form" >
+            <div class="fields">
+                <label for="username" >Username: </label>
+                <input type="text" formControlName="username">
+            </div>
+            <div class="fields">
+                <label for="password">Password: </label>
+                <input type="password" formControlName="password">
+            </div>
+            <div class="fields">
+                <label for="name">Name: </label>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="fields">
+                <label for="surname">Surname: </label>
+                <input type="text" formControlName="surname">
+            </div>
+            <div class="fields">
+                <label for="company_email">Company email: </label>
+                <input type="text" formControlName="company_email">
+            </div>
+            <div class="fields">
+                <label for="personal_email">Personal email: </label>
+                <input type="text" formControlName="personal_email">
+            </div>
+            <div class="active">
+                <label for="active">Active: </label>
+                <input type="checkbox" formControlName="active">
+            </div>
+        </div>
+        <button class="button-send_style"type="submit"> submit</button>
+    </form>
+</div>
