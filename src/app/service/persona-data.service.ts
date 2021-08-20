@@ -12,10 +12,9 @@ interface Persona {
   active        : boolean;
 }
 
-@Injectable()
-// {
-//   providedIn: 'root'
-// }
+@Injectable({
+  providedIn: 'root'
+})
 export class PersonaDataService {
 
   
@@ -49,9 +48,8 @@ export class PersonaDataService {
     active:[true]
   })
 
-  serviceProfiles: Persona[] = [
-    this.dummie, this.dummie2
-  ]
+  serviceProfiles: Persona[] = [this.dummie, this.dummie2]
+  
 
 
   constructor( public fb: FormBuilder ) {  }

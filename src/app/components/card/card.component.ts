@@ -23,10 +23,6 @@ export class CardComponent implements OnInit {
 
   constructor(public personaDataService: PersonaDataService) {  }
 
-  
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
   
 }
