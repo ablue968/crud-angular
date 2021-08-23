@@ -1,15 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PersonaDataService } from '../../service/persona-data.service';
-
-interface Persona {
-  username      : String;
-  password      : String;
-  name          : String;
-  surname       : String;
-  company_email : String;
-  personal_email: String;
-  active        : boolean;
-}
+import { Persona } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-card',
@@ -18,11 +9,17 @@ interface Persona {
 })
 export class CardComponent implements OnInit {
 
-  @Input() person!: Persona[];
+  cardProfiles: Persona[] = []
   
 
   constructor(public personaDataService: PersonaDataService) {  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.personaDataService.testService().subscribe(p =>{
+      this.cardProfiles = p;
+    });
+
+  }
   
 }

@@ -1,17 +1,19 @@
-    <div class="card-container">
+    <div class="card-container" *ngFor="let profile of cardProfiles">
   
         <div class="card">
-          <p >Username: {{person[0].username}}</p>
-          <p >Password: {{person[0].password}}</p>
-          <p >Name: {{person[0].name}}</p>
-          <p >Surname: {{person[0].surname}}</p>
-          <p >Company email: {{person[0].company_email}}</p>
-          <p >Personal email: {{person[0].personal_email}}</p>
-          <p >Active: {{person[0].active}}</p>
-          <p> Creation Date: </p>
+          <p >Username: {{profile.username}}</p>
+          <p >Password: {{profile.password}}</p>
+          <p >Name: {{profile.name}}</p>
+          <p >Surname: {{profile.surname}}</p>
+          <p >Company email: {{profile.company_email}}</p>
+          <p >Personal email: {{profile.personal_email}}</p>
+          <p >Active: {{profile.active}}</p>
+          <p> Creation Date: {{profile.created_date}}</p>
+          <div class="button_crud">
+            <button> update </button>
+            <button> delete </button>
+          </div>
         </div>
-
     </div>
-
 
 

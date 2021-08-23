@@ -1,6 +1,6 @@
 {
 
-    "profiles": [
+    "personas": [
         {
             "id"            :  0,
             "username"      : "dummie01",
@@ -12,7 +12,7 @@
             "active"        : true,
             "created_date"  : "2021-07-27T08:19:36.687+00:00",
             "imagen_url"    : "https://picsum.photos/id/1/200/300",
-            "deleted_date"  : "2021-08-18T08:19:36.687+00:00"
+            "deleted_date"  : null
 
         },
         {
@@ -27,6 +27,20 @@
             "created_date"  : "2021-07-27T08:19:36.687+00:00",
             "imagen_url"    : "https://picsum.photos/id/1/200/300",
             "deleted_date"  : "2021-08-18T08:19:36.687+00:00"
+
+        },
+        {
+            "id"            :  2,
+            "username"      : "dummie03",
+            "password"      : "123456a",
+            "name"          : "pepe2",
+            "surname"       : "perez2",
+            "company_email" : "pepe.perez2@ɵbosonit.com",
+            "personal_email": "pepe.perez2@personal.com",
+            "active"        : true,
+            "created_date"  : "2021-07-27T08:19:36.687+00:00",
+            "imagen_url"    : "https://picsum.photos/id/1/200/300",
+            "deleted_date"  : null
 
         }
     ]
