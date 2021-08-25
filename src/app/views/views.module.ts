@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 
 
 import { PersonaDataService } from '../service/persona-data.service';
+import { UpdateComponent } from './update/update.component';
 
 
 
@@ -14,6 +15,7 @@ import { PersonaDataService } from '../service/persona-data.service';
   declarations: [
     HomeComponent,
     ErrorComponent,
+    UpdateComponent,
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { PersonaDataService } from '../service/persona-data.service';
   ],
   exports: [
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    UpdateComponent
   ],
   providers: [
     PersonaDataService

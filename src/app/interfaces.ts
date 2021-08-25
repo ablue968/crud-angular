@@ -1,13 +1,13 @@
 export interface Persona {
-        id?            : Number;
-        username      : String;
-        password      : String;
-        name          : String;
-        surname       : String;
-        company_email : String;
-        personal_email: String;
+        id?            : number;
+        username      : string;
+        password      : string;
+        name          : string;
+        surname       : string;
+        company_email : string;
+        personal_email: string;
         active        : boolean;
-        created_date?  : Date;
-        imagen_url?    : String;
-        deleted_date?  : Date;
+        created_date  : Date | null;
+        imagen_url    : string | null;
+        deleted_date  : Date | null;
 }

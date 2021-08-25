@@ -2,3 +2,16 @@
     background-color: green;
 
 }
+
+.card-home{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: blue;
+    padding: 0.5rem;
+}
+
+.spacer{
+    flex: 1 1 auto;
+    direction: rtl;
+    padding-right: 2rem;
+}

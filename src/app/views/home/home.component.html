@@ -1,9 +1,10 @@
 
 <div class="home">
-    <app-person-form></app-person-form>
-    <hr>
-    <div class="card-home" >
-        <app-card></app-card>
+    <div class="spacer">          
+        <button (click)="createOrUpdate('create')"> create new person</button>
+    </div>
+    <div class="card-home" *ngFor="let profile of profiles">
+        <app-card [profile] = "profile" ></app-card>
     </div>
 
 </div>

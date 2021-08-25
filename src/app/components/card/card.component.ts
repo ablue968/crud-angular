@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PersonaDataService } from '../../service/persona-data.service';
 import { Persona } from 'src/app/interfaces';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -9,17 +10,18 @@ import { Persona } from 'src/app/interfaces';
 })
 export class CardComponent implements OnInit {
 
-  cardProfiles: Persona[] = []
+  @Input() profile!: Persona;
   
+  constructor(public personaDataService: PersonaDataService, private router: Router) {  }
 
-  constructor(public personaDataService: PersonaDataService) {  }
+  ngOnInit(): void {  }
 
-  ngOnInit(): void {
+  btnUpdate(){
+    this.router.navigateByUrl('/update')
+  }
 
-    this.personaDataService.testService().subscribe(p =>{
-      this.cardProfiles = p;
-    });
-
+  btnDelete(id : number){
+    console.log(id)
   }
   
 }

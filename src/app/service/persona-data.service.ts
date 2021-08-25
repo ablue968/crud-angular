@@ -1,38 +1,29 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { Persona } from '../interfaces';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaDataService {
 
-  api_url: String="http://localhost:3000/personas";
+  api_url: String=environment.apiUrl;
 
-  personForm: FormGroup = this.fb.group({
-    username:['pepero200'],
-    password:['123456', Validators.required],
-    name:['pepe', Validators.required],
-    surname:['pepon', Validators.required],
-    company_email:['pepe.pepon@bosonit.com', Validators.required],
-    personal_email:['pepe2000@example.com', Validators.required],
-    active:[true]
-  })
+  constructor( private http: HttpClient ) {  }
+  
+  getPersona(): Observable<Persona[]>{
+    return this.http.get<Persona[]>(`${this.api_url}/personas`)
+  }
 
-  // getPersonas(persona: Persona){
-  //   return this
+  // getPersonaById( id: number): Observable<Persona>{
+  //   return this.http.get<Persona>(`${this.api_url}/personas/${id})
   // }
 
-  serviceProfiles: Persona[] = []
-  
-  
-
-  constructor( public fb: FormBuilder, private http: HttpClient ) {  }
-
-  testService(): Observable<Persona[]>{
-    return this.http.get<Persona[]>('http://localhost:3000/personas')
+  addPerson( person: Persona): Observable<Persona>{
+    return this.http.post<Persona>(`${this.api_url}/personas`, person)
   }
+
 
   
 }
