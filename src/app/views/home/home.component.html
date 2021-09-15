@@ -1,10 +1,11 @@
 
 <div class="home">
     <div class="spacer">          
-        <button (click)="createOrUpdate('create')"> create new person</button>
+        <button class="spacer_button" mat-raised-button (click)="createOrUpdate('create')" color="primary"> create new person</button>
+        <mat-divider></mat-divider>
     </div>
-    <div class="card-home" *ngFor="let profile of profiles">
-        <app-card [profile] = "profile" ></app-card>
+    <div class="card-home" >
+        <app-card *ngFor="let profile of profiles"  [profile] = "profile" ></app-card>
     </div>
 
 </div>

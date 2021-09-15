@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Persona } from '../interfaces';
+import { Persona, PersonaUpdate } from '../interfaces';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 @Injectable({
@@ -16,14 +16,17 @@ export class PersonaDataService {
     return this.http.get<Persona[]>(`${this.api_url}/personas`)
   }
 
-  // getPersonaById( id: number): Observable<Persona>{
-  //   return this.http.get<Persona>(`${this.api_url}/personas/${id})
-  // }
-
   addPerson( person: Persona): Observable<Persona>{
-    return this.http.post<Persona>(`${this.api_url}/personas`, person)
+    return this.http.post<Persona>(`${this.api_url}`, person)
+  };
+
+  deletePerson(id: String): Observable<Persona>{
+    return this.http.delete<Persona>(`${this.api_url}/personas/${id}`);
   }
 
+  updatePerson(person: PersonaUpdate, id: number): Observable<PersonaUpdate>{
+    return this.http.put<PersonaUpdate>(`${this.api_url}/personas/${id}`, person)
+  }
 
   
 }

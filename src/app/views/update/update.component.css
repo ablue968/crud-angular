@@ -1,0 +1,17 @@
+.example-form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    /* background-color: grey; */
+    padding-left: 0.5rem;
+    border-radius: 15px;
+  }
+
+.update-title{
+  text-align: center;
+}
+
+.button-submit{
+  display: flex;
+  justify-content: end;
+}

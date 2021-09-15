@@ -1,17 +1,21 @@
-.home{
-    background-color: green;
-
-}
 
 .card-home{
     display: inline-flex;
     flex-direction: row;
-    background-color: blue;
     padding: 0.5rem;
 }
 
 .spacer{
+    padding-top: 0.5rem;
     flex: 1 1 auto;
     direction: rtl;
-    padding-right: 2rem;
+}
+
+.spacer_button{
+    margin-right: 0.5rem;
+}
+
+mat-divider{
+    margin-top: 0.5rem;
+    border-top-color: white;
 }

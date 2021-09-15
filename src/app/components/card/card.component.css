@@ -1,17 +1,15 @@
 .card{
-    background-color: red;
-    max-width: 12rem;
-    height: 17.5rem;
-    min-height: 15rem;
-    border-radius: 0.5rem;
-}
-.card-container{
-    display: inline-flex;
-    flex-direction: row;
-    background-color: blue;
-    padding: 0.5rem;
+    max-width: 180px;
+    margin: 0.5rem;
 }
 
-p{
-    margin: 0.5em;
+.card_header{
+    display: flex;
+    justify-content: center;
+}
+
+mat-card-actions{
+    display: flex;
+   justify-content: space-evenly;
+    margin: 0;
 }

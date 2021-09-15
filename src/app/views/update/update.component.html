@@ -1,9 +1,41 @@
-<!-- <div *ngIf="!create; else update">
-    opción 1
-    <app-person-form></app-person-form>
+<div>
+    <form class="submit_form" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+        <div class="example-form" >
+            <h1 class="update-title">Updating persona with ID: {{data.id}}</h1>
+            <mat-form-field appearance="fill">
+                <mat-label>Username</mat-label>
+                <input  matInput formControlName ="username" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input  matInput formControlName ="password">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input  matInput formControlName ="name" >
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Surname</mat-label>
+                <input  matInput formControlName ="surname">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Company_email</mat-label>
+                <input  matInput formControlName ="company_email">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Personal email</mat-label>
+                <input  matInput formControlName ="personal_email">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>{{data.active | yesNo }}</mat-label>
+                <mat-select>
+                <mat-option  value="true">Yes</mat-option>
+                <mat-option  value="false">No</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="button-submit" mat-dialog-actions>
+            <button (click)="onNoClick()" mat-raised-button type="submit" color="primary"> update </button>
+        </div>
+    </form>
 </div>
-
-<ng-template #update>
-    opción 2
-</ng-template>
- -->

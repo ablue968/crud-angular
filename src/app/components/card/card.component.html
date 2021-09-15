@@ -1,18 +1,25 @@
-
-<div class="card">
-  <p >ID: {{ profile.id }}</p>
-  <p >Username: {{profile.username}}</p>
-  <p >Password: {{profile.password}}</p>
-  <p >Name: {{profile.name}}</p>
-  <p >Surname: {{profile.surname}}</p>
-  <p >Company email: {{profile.company_email}}</p>
-  <p >Personal email: {{profile.personal_email}}</p>
-  <p >Active: {{profile.active}}</p>
-  <p> Creation Date: {{profile.created_date | date: 'dd/MM/yyyy'}}</p>
-  <div class="button_crud">
-    <button (click)="btnUpdate()"> update </button>
-    <button (click)="btnDelete( profile.id!  )"> delete </button>
-  </div>
-</div>
+<mat-card class="card">
+  <mat-card-content>
+    <p class="card_header">ID: {{ profile.id }}</p>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <p >Username: {{profile.username}}</p>
+      <p >Password: {{profile.password}}</p>
+      <p >Name: {{profile.name}}</p>
+      <p >Surname: {{profile.surname}}</p>
+      <p >Company email: {{profile.company_email}}</p>
+      <p >Personal email: {{profile.personal_email}}</p>
+      <p >Active: {{profile.active}}</p>
+      <p >Creation Date: {{profile.created_date | date: 'dd/MM/yyyy'}}</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-card-footer>
+      <mat-card-actions>
+        <button mat-raised-button (click)="openDialog()" color="primary"> update </button>
+        <button mat-raised-button (click)="btnDelete( profile.id!)" color="warn"> delete </button>
+      </mat-card-actions>
+    </mat-card-footer>
+  </mat-card-content>
+</mat-card>
 
 
