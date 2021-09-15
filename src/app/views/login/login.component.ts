@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     }
 
     if(emailArr.includes(email) && passArr.includes(pass)){
-      this.loginS.login();
+      this.loginS.login(email);
     }else{
       this.router.navigate(['error']);
     }

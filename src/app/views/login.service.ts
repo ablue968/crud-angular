@@ -16,15 +16,23 @@ export class LoginService {
 
   constructor(private router:Router, private http:HttpClient) { }
 
-  login(){
+  login(user: string){
     this.logged = true;
     this.router.navigate(['/']);
-    sessionStorage.setItem('login','true');
+    sessionStorage.setItem( user ,'true');
   }
 
+  logout(){
+    this.logged = false;
+    this.router.navigate(['login']);
+    sessionStorage.removeItem('user')
+  }
+
+  //para cuando tenga varios
   addUser(user:User):Observable<User>{
     return this.http.post<User>(`${this.api_url}/users`, user);
   }
+
 
   getAllUsers():Observable<User[]>{
     return this.http.get<User[]>(`${this.api_url}/usuarios`)
