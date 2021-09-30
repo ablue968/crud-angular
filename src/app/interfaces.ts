@@ -1,5 +1,3 @@
-export type Roles = 'PERSONA' | 'STUDENT';
-
 export interface Persona {
         id?           : number;
         username      : string;
@@ -32,9 +30,9 @@ export interface User{
         password: string;
 }
 
-export interface UserResponse {
-        message: string;
+export interface LoginResponse {
+        email: string;
+        password: string;
         token: string;
-        userId: number;
-        role: Roles;
+        ok: boolean;
 }

@@ -5,39 +5,17 @@
       "password": "123456a",
       "name": "pepe",
       "surname": "perez",
-      "company_email": "pepe.perez@ɵbosonit.com",
+      "company_email": "pepe.perez@bosonit.com",
       "personal_email": "pepe.perez@personal.com",
       "active": true,
       "id": 0
-    },
-    {
-      "username": "dummie002",
-      "password": "123456a",
-      "name": "pepe2",
-      "surname": "perez2",
-      "company_email": "pepe.perez2@ɵbosonit.com",
-      "personal_email": "pepe.perez2@personal.com",
-      "active": true,
-      "id": 1
-    },
-    {
-      "id": 2,
-      "username": "dummie03",
-      "password": "123456a",
-      "name": "pepe2",
-      "surname": "perez2",
-      "company_email": "pepe.perez2@ɵbosonit.com",
-      "personal_email": "pepe.perez2@personal.com",
-      "active": true,
-      "created_date": "2021-07-27T08:19:36.687+00:00",
-      "imagen_url": "https://picsum.photos/id/1/200/300",
-      "deleted_date": null
     }
   ],
   "usuarios":[
     {
-      "email"   : "ejemplo@hotmail.com",
-      "password": "123456"
+      "email"   : "pepe.perez@bosonit.com",
+      "password": "123456",
+      "token"   : "superSecretToken"
     }
   ]
 }

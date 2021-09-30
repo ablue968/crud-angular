@@ -22,6 +22,7 @@ import { UpdateComponent } from './update/update.component';
 
 import { PersonaDataService } from '../service/persona-data.service';
 import { YesNoPipe } from '../yes-no.pipe';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -31,7 +32,8 @@ import { YesNoPipe } from '../yes-no.pipe';
     ErrorComponent,
     UpdateComponent,
     LoginComponent,
-    YesNoPipe
+    YesNoPipe,
+    RegisterComponent
 
   ],
   imports: [

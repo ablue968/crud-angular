@@ -6,12 +6,35 @@
         max-width: 300px;
         margin: 1rem auto;
         text-align: center;
-        height: 350px;
+        height: 320px;
     }
 
     .full-width-input, button{
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .google-sign-in{
+        background-color: white;
+        font-weight: bold;
+        background-image: url('../../../assets/svg_google.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: 50px;
+        color:black;
     }
 
 }
+
+mat-card-actions{
+    height: 120px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    button{
+        margin: 0 !important;
+    }
+}
+

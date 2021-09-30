@@ -4,15 +4,19 @@
             <mat-card-content>
                 <h1>LOGIN</h1>  
                 <mat-form-field class="full-width-input">
-                    <mat-label>Username</mat-label>
-                    <input matInput formControlName="email" type="text" placeholder="Username" required>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="email" placeholder="Email" required>
                 </mat-form-field>
                 <mat-form-field class="full-width-input">
                     <mat-label>Password</mat-label>
                     <input matInput formControlName="password" type="password" placeholder="Password" required>
-                </mat-form-field>   
-                <button (click)="toLogin()" type="submit" mat-raised-button color="primary">Login</button>
-                <button type="button" mat-raised-button color="accent">Home</button>
+                </mat-form-field>
+                <mat-card-actions>
+                    <button (click)="login()" type="submit" mat-raised-button color="primary">Login</button>
+                    <mat-divider></mat-divider>
+                    <br>
+                    <button class="google-sign-in" type="button" mat-raised-button (click)="googleHandler()" >Login con Google</button>
+                </mat-card-actions>   
             </mat-card-content>
         </form>
     </mat-card>
